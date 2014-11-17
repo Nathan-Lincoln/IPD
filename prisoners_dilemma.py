@@ -18,7 +18,7 @@ CSE Project 1.3.5 Collaborating on a Project
 Draft, Do Not Distribute
 Version 8/23/2013 
 '''
-
+''' So much documentation ''' 
 import random
 def play_round(player1, player2, history1, history2, score1, score2):
     '''
