@@ -126,10 +126,24 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     #
     #This example player always betrays.      
     elif player == 1:
-        if getting_team_name:
-            return 'backstabber'
-        else:
+        if len(opponent_history) == 0:
             return 'b'
+        if getting_team_name:
+            return 'Nate & Frasier'
+        likelihood = 0
+        for x in opponent_history:
+            #determine likelihood that the opponent will betray
+            if x == 'b'
+                likelihood += 1
+        #divide the likelihood variable by the number of elements in their list (average)
+        likelihood = likelihood / len(opponent_history)
+        if likelihood == 1:
+            return 'b' #opponent always betrays, betrayal is the best option
+        elif likelihood == 0:
+            return 'b' #opponent is a trusting idiot...
+        
+
+        
 
 
 
