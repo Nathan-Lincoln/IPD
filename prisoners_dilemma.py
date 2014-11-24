@@ -130,21 +130,6 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             return 'b'
         if getting_team_name:
             return 'Nate & Frasier'
-        # see if we can detect a basic pattern within the first few turns
-        sample_rounds = 20
-        if(len(history) < 20):
-            sample_rounds = len(history)
-        def detect_pattern(arr, len):
-            probability = 0
-            for x in range (len / 2):
-                #if the opponent colludes every x times, then detect that
-                for i in range(len(1, arr)):
-                    if i % x == 0:
-                        probability += 1
-                    elif 
-            # We now have the likely probability. 
-
-
         likelihood = 0
         for x in opponent_history:
             #determine likelihood that the opponent will betray
@@ -157,7 +142,8 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
         elif likelihood == 0:
             return 'b' #opponent is a trusting idiot...
         else:
-            return 'c' #opponent may collude, lets trust him.        
+            return 'c'
+                
 
 
 
